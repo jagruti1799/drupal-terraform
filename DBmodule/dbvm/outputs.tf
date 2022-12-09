@@ -4,6 +4,5 @@ output "public_ip_address" {
 }
 
 output "vm_name" {
-  description = "value"
   value = azurerm_virtual_machine.vm.*.name
 }
