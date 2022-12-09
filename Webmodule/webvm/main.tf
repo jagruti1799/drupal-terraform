@@ -55,7 +55,7 @@ resource "azurerm_key_vault" "keyvault" {
   tenant_id                   = data.azurerm_client_config.current.tenant_id
   soft_delete_retention_days  = 7
   purge_protection_enabled    = false
-  enable_rbac_authorization = true
+  #enable_rbac_authorization = true
 
   sku_name = "standard"
 
@@ -94,9 +94,9 @@ resource "azurerm_virtual_machine" "vm" {
     azurerm_public_ip.publicip,
     azurerm_network_interface.network_interfaces
   ]
-     identity {
-    type = "SystemAssigned"
-  }
+  #    identity {
+  #   type = "SystemAssigned"
+  # }
   storage_os_disk {
     name              = var.disk[count.index]
     caching           = "ReadWrite"
