@@ -11,7 +11,7 @@ resource "azurerm_network_security_group" "webnsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefix      = "182.76.141.106"
+    source_address_prefix      = "14.97.73.250"
     destination_address_prefix = "*"
   }
   security_rule {
@@ -22,7 +22,7 @@ resource "azurerm_network_security_group" "webnsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "80"
-    source_address_prefix      = "182.76.141.106"
+    source_address_prefix      = "14.97.73.250"
     destination_address_prefix = "*"
   }
 }
