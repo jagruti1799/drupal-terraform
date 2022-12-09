@@ -89,6 +89,11 @@ resource "azurerm_virtual_machine" "vm" {
   delete_os_disk_on_termination    = true
   delete_data_disks_on_termination = true
 
+
+  identity {
+    type = "SystemAssigned"
+  }
+
   storage_os_disk {
     name              = "dbdisk"
     caching           = "ReadWrite"
